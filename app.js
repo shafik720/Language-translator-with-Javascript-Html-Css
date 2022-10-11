@@ -7,7 +7,9 @@ fromValue = document.querySelector('.left-icon-section select'),
 toValue = document.querySelector('.right-icon-section select'),
 exchangeBtn = document.querySelector('.mid-section i'),
 fromCopyBtn = document.querySelector('#fromCopyBtn'),
-toCopyBtn = document.querySelector('#toCopyBtn')
+toCopyBtn = document.querySelector('#toCopyBtn'),
+fromHornBtn = document.querySelector('#fromHornBtn'),
+toHornBtn = document.querySelector('#toHornBtn')
 ;
 
 
@@ -60,4 +62,17 @@ fromCopyBtn.addEventListener('click',()=>{
 })
 toCopyBtn.addEventListener('click',()=>{
     navigator.clipboard.writeText(to.value);
+})
+
+fromHornBtn.addEventListener('click',()=>{
+    let talk = new SpeechSynthesisUtterance(from.value);
+    talk.lang = selectMenu[0].value;
+    speechSynthesis.speak(talk);
+})
+
+toHornBtn.addEventListener('click',()=>{
+    console.log('clicked');
+    let talk = new SpeechSynthesisUtterance(to.value);
+    talk.lang = selectMenu[1].value;
+    speechSynthesis.speak(talk);
 })
