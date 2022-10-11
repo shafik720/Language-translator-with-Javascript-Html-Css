@@ -5,7 +5,9 @@ from = document.querySelector('.left-section textarea'),
 to = document.querySelector('.right-section textarea'),
 fromValue = document.querySelector('.left-icon-section select'),
 toValue = document.querySelector('.right-icon-section select'),
-exchangeBtn = document.querySelector('.mid-section i');
+exchangeBtn = document.querySelector('.mid-section i'),
+fromCopyBtn = document.querySelector('#fromCopyBtn'),
+toCopyBtn = document.querySelector('#toCopyBtn')
 ;
 
 
@@ -51,4 +53,11 @@ exchangeBtn.addEventListener('click', ()=>{
 window.addEventListener('load',()=>{
     from.value = '';
     to.value = '';
+})
+
+fromCopyBtn.addEventListener('click',()=>{
+    navigator.clipboard.writeText(from.value);
+})
+toCopyBtn.addEventListener('click',()=>{
+    navigator.clipboard.writeText(to.value);
 })
