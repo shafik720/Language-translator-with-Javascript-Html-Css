@@ -1,6 +1,6 @@
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 body{
@@ -12,6 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container{
@@ -19,6 +20,17 @@ body{
     padding: 30px 25px;
     /* width: 600px; */
     border-radius: 5px;
+}
+.container button{
+    margin-top: 25px;
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background: #007ACC;
+    color: white;
+    cursor: pointer;
 }
 .input-section{
     display: flex;
@@ -50,3 +62,19 @@ body{
 
 
 
+.icon-section{
+    display: flex;
+    justify-content: space-between;
+}
+.left-icon-section, .right-icon-section{
+    /* border: 2px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+}
+.icon-section i{
+    font-size: 25px;
+    color: grey;
+    cursor: pointer;
+}
