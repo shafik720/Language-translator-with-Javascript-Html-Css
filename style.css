@@ -28,9 +28,10 @@ body{
     border: none;
     outline: none;
     font-size: 18px;
-    background: #007ACC;
+    background: linear-gradient(45deg,#440F50, #B15B86);
     color: white;
     cursor: pointer;
+    border-radius: 5px;
 }
 .input-section{
     display: flex;
