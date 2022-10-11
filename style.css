@@ -7,6 +7,18 @@
 
 
 
+.copied{
+    background: black;
+    color: white;
+    position: fixed;
+    padding: 0px 20px;
+    border-radius: 10px;
+    transition: all 0.4s ;
+    opacity: 0;
+}
+.copied.active{
+    opacity: 1;
+}
 
 body{
     margin: 0;

@@ -9,7 +9,8 @@ exchangeBtn = document.querySelector('.mid-section i'),
 fromCopyBtn = document.querySelector('#fromCopyBtn'),
 toCopyBtn = document.querySelector('#toCopyBtn'),
 fromHornBtn = document.querySelector('#fromHornBtn'),
-toHornBtn = document.querySelector('#toHornBtn')
+toHornBtn = document.querySelector('#toHornBtn'),
+copied = document.querySelector('.copied')
 ;
 
 
@@ -59,9 +60,29 @@ window.addEventListener('load',()=>{
 
 fromCopyBtn.addEventListener('click',()=>{
     navigator.clipboard.writeText(from.value);
+    
+    let counter = 0;
+    let x = setInterval(() => {
+        copiedText();
+        counter++;
+        if(counter==13){
+            clearInterval(x);
+            copied.classList.remove('active');
+        }
+    }, 50);
 })
 toCopyBtn.addEventListener('click',()=>{
     navigator.clipboard.writeText(to.value);
+
+    let counter = 0;
+    let x = setInterval(() => {
+        copiedText();
+        counter++;
+        if(counter==13){
+            clearInterval(x);
+            copied.classList.remove('active');
+        }
+    }, 50);
 })
 
 fromHornBtn.addEventListener('click',()=>{
@@ -76,3 +97,7 @@ toHornBtn.addEventListener('click',()=>{
     talk.lang = selectMenu[1].value;
     speechSynthesis.speak(talk);
 })
+
+function copiedText(){
+    copied.classList.add('active');
+}
