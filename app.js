@@ -47,3 +47,8 @@ exchangeBtn.addEventListener('click', ()=>{
     from.value = to.value;
     to.value = storeInputValue;
 })
+
+window.addEventListener('load',()=>{
+    from.value = '';
+    to.value = '';
+})
